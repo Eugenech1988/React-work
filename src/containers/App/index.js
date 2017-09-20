@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer'
 import './style.css';
 
 const Application = () => <h1>Application</h1>;
@@ -18,6 +19,7 @@ const App = (props, context) => {
           <Route path="/information" component={Information} />
         </Switch>
       </div>
+      <Footer />
     </div>
   );
 };

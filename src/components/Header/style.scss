@@ -1,0 +1,15 @@
+.main-header {
+  .wrapp {
+    background-color: #222;
+  }
+  .logo-link {
+    transition: opacity .3s ease;
+    &:hover {
+      opacity: .5;
+    }
+  }
+  .logo-img {
+    max-width: 70px;
+    height: auto;
+  }
+}
