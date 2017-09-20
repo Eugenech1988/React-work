@@ -1,5 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Nav from '../Nav';
+import NavItem from '../NavItem';
 import './style.css';
+
+const navItems = [
+  'HOME',
+  'APPLICATION'
+];
 
 const Header = (props, context) => {
   return (
@@ -7,12 +15,21 @@ const Header = (props, context) => {
       <div className="wrapp">
         <div className="container">
           <div className="logo-wrapp">
-            <a href="" className="logo-link">
+            <Link exact to='/' className="logo-link">
               <img src="" alt="" className="logo-img"/>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
+      <Nav className="main-nav">
+        {navItems.map((item, index) =>
+          <NavItem
+            title={item}
+            activeKey={item}
+            key={index}
+          />
+        )}
+      </Nav>
     </Header>
   )
 };
