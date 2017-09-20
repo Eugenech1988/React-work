@@ -5,13 +5,13 @@ import NavItem from '../NavItem';
 import './style.css';
 
 const navItems = [
-  'HOME',
-  'APPLICATION'
+  'information',
+  'aplication'
 ];
 
 const Header = (props, context) => {
   return (
-    <Header className="main-header">
+    <div className="main-header">
       <div className="wrapp">
         <div className="container">
           <div className="logo-wrapp">
@@ -30,8 +30,8 @@ const Header = (props, context) => {
           />
         )}
       </Nav>
-    </Header>
+    </div>
   )
 };
 
-export default Header();
+export default Header;
