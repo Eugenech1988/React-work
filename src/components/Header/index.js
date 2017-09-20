@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 
 const Header = (props, context) => {
   return (
@@ -14,7 +15,6 @@ const Header = (props, context) => {
       </div>
     </Header>
   )
-
 };
 
 export default Header();
