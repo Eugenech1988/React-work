@@ -1,8 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import Nav from '../Nav';
 import NavItem from '../NavItem';
-import HeartLogo from '../../assets/icons/ReactHeart.svg';
 import './style.css';
 
 const navItems = [
