@@ -1,14 +1,9 @@
 .main-footer {
   .wrapp {
-    background-color: #222222;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .footer-text {
-    text-align: center;
-    color: #d7d7d7;
-    font-family: 'sfns_displaythin', sans-serif;
-    font-size: 16px;
-    line-height: 16px;
+    height: 50px;
+    -webkit-box-shadow: inset 0px 0px 15px 10px rgba(243,243,243,1);
+    -moz-box-shadow: inset 0px 0px 15px 10px rgba(243,243,243,1);
+    box-shadow: inset 0px 0px 15px 10px rgba(243,243,243,1);
+    background: #f3f3f3 url("../../assets/img/footer-background.png") no-repeat center center/cover;
   }
 }
