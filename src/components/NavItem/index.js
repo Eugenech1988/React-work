@@ -4,30 +4,9 @@ import { Link } from 'react-router-dom';
 
 class NavItem extends React.Component {
 
-  constructor() {
-    super();
-    this.state = {
-      active: false,
-    };
-  }
-
   handleClick = () => {
 
     const navItem = document.getElementsByClassName('nav-link');
-
-    if (this.state.active === false) {
-      this.setState({
-        active: true,
-      });
-      navItem.classList.add('active');
-      console.log('active');
-    } else {
-      this.setState({
-        active: false
-      });
-      console.log('false');
-      navItem.classList.remove('active');
-    }
 
     };
 
