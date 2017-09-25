@@ -63,7 +63,8 @@ body {
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-  background-color: #f3f3f3; }
+  background: #f3f3f3 url(../../assets/icons/reactBG.svg) no-repeat center center;
+  background-size: 50% 50%; }
 
 .main-footer {
   -webkit-box-flex: 0;

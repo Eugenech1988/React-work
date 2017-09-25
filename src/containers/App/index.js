@@ -11,8 +11,8 @@ const Information = () => <h1>Information</h1>;
 const App = (props, context) => {
   return (
     <div className="wrapper">
+      <Header />
       <div className="content">
-        <Header />
         <Switch>
           <Route exact path='/' component={Application} />
           <Route path="/aplication" component={Application} />
