@@ -1,13 +1,13 @@
-import React from 'react';
-import cx from 'classnames';
+import React, {Component} from 'react';
 
-const Nav = (props, context) => {
-  const className = cx('navigation', props.className);
-  return (
-    <nav {...props} className={className}>
-      {props.children}
-    </nav>
-  );
-};
+class Application extends Component {
+    render() {
+        return(
+            <div className='app-wrapp'>
+                
+            </div>
+        );
+    }
+}
 
-export default Nav;
+export default Application;
