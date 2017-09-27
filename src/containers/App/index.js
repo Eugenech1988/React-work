@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Route, Switch } from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Header from '../../components/Header';
-import Footer from '../../components/Footer'
+import Footer from '../../components/Footer';
 import './style.css';
 
 const Application = () => <h1>Application</h1>;
@@ -13,11 +14,19 @@ const App = (props, context) => {
     <div className="wrapper">
       <Header />
       <div className="content">
-        <Switch>
-          <Route exact path='/' component={Application} />
-          <Route path="/aplication" component={Application} />
-          <Route path="/information" component={Information} />
-        </Switch>
+        <Route render={({location}) => (
+          <ReactCSSTransitionGroup
+            transitionName="fade"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={500}
+          >
+            <Switch  key={location.key} location={location}>
+              <Route exact path='/' component={Information}/>
+              <Route path='/information' component={Information}/>
+              <Route path="/application" component={Application}/>
+            </Switch>
+          </ReactCSSTransitionGroup>
+        )}/>
       </div>
       <Footer />
     </div>

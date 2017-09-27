@@ -6,7 +6,7 @@ class NavItem extends React.Component {
 
   handleClick = () => {
 
-    const navItem = document.getElementsByClassName('nav-link');
+    // const navItem = document.getElementsByClassName('nav-link');
 
     };
 

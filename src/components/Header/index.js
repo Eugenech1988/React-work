@@ -5,12 +5,12 @@ import './style.css';
 
 const navItems = [
   'information',
-  'aplication'
+  'application'
 ];
 
 const Header = (props, context) => {
   return (
-    <div className="main-header">
+    <header className="main-header">
       <div className="wrapp">
         <div className="container">
           <Nav className="main-nav">
@@ -24,7 +24,7 @@ const Header = (props, context) => {
           </Nav>
         </div>
       </div>
-    </div>
+    </header>
   )
 };
 
