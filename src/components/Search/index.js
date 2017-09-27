@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import SearchForm from '../SearchFrom';
 import './Style.css';
 
 class Search extends Component {
@@ -6,14 +7,7 @@ class Search extends Component {
     return (
       <div className='app-wrap'>
         <div className="container">
-          <form action='' className='search-form'>
-            <div className='input-wrap'>
-              <input type='text' className='search-input' name='search-input' id='search-input'/>
-              <label htmlFor='search-input' className='input-label'>
-                Search
-              </label>
-            </div>
-          </form>
+          <SearchForm />
         </div>
       </div>
     );
