@@ -4,10 +4,10 @@ import {Route, Switch} from 'react-router-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import Information from '../../components/Information';
 import './style.css';
 
-const Application = () => <h1>Application</h1>;
-const Information = () => <h1>Information</h1>;
+const Application = () => <h1 className="content-h">Application</h1>;
 
 const App = (props, context) => {
   return (

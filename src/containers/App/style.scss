@@ -80,6 +80,7 @@ body {
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
+  position: relative;
   background: #f3f3f3 url(../../assets/icons/reactBG.svg) no-repeat center center;
   background-size: 50% 50%;
 }
@@ -132,19 +133,34 @@ input:focus:-moz-placeholder { /* Firefox 18- */
 }
 
 .fade-enter {
-  opacity: 0.01;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
 }
 
 .fade-enter.fade-enter-active {
+  visibility: visible;
   opacity: 1;
   transition: opacity 500ms ease-in;
+  top: 50%;
 }
 
 .fade-leave {
   opacity: 1;
+  visibility: visible;
+  top: 50%;
 }
 
 .fade-leave.fade-leave-active {
-  opacity: 0.01;
+  visibility: hidden;
+  opacity: 0;
   transition: opacity 500ms ease-in;
+  top: 0;
+}
+
+.content-h {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

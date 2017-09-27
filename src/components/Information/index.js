@@ -1,13 +1,17 @@
 import React from 'react';
-import cx from 'classnames';
+import './style.css';
 
-const Nav = (props, context) => {
-  const className = cx('navigation', props.className);
+const Information = (props, context) => {
   return (
-    <nav {...props} className={className}>
-      {props.children}
-    </nav>
+    <div className="main-content-information">
+      <h1 className="heading">
+        React Search App
+      </h1>
+      <p className="notify">
+        This is React Search App
+      </p>
+    </div>
   );
 };
 
-export default Nav;
+export default Information;

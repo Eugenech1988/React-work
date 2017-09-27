@@ -1,25 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class NavItem extends React.Component {
 
   handleClick = () => {
 
-    // const navItem = document.getElementsByClassName('nav-link');
 
     };
 
   render() {
     return (
       <div className="nav-item">
-        <Link
-          to={this.props.title}
+        <NavLink
+          to={'/'+this.props.title}
           className="nav-link"
           onClick={this.handleClick}
           >
-          {this.props.title}
-        </Link>
+          {this.props.title}!
+        </NavLink>
       </div>
     );
   }

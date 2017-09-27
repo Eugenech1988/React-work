@@ -53,13 +53,17 @@
       &:hover {
         background-color: rgba(255,255,255,.5);
         color: #3fcc00;
-        -webkit-box-shadow: inset 0px 0px 10px 4px rgba(176,183,255,0.63);
-        -moz-box-shadow: inset 0px 0px 10px 4px rgba(176,183,255,0.63);
-        box-shadow: inset 0px 0px 10px 4px rgba(176,183,255,0.63);
+        -webkit-box-shadow: inset 0px 0px 5px 0 rgba(176,183,255,0.63), 0px 0px 5px 0 rgba(176,183,255,0.63);
+        -moz-box-shadow: inset 0px 0px 5px 0 rgba(176,183,255,0.63), 0px 0px 5px 0 rgba(176,183,255,0.63);
+        box-shadow: inset 0px 0px 5px 0 rgba(176,183,255,0.63), 0px 0px 5px 0 rgba(176,183,255,0.63);
       }
       &.active {
-        background-color: rgba(144,144,144, .5);
-        color: #67CC48;
+        transition: all .3s ease;
+        background-color: rgba(255,255,255,.5);
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(173,64,173,0.63), inset 0px 0px 5px 0px rgba(173,64,173,0.63);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(173,64,173,0.63), inset 0px 0px 5px 0px rgba(173,64,173,0.63);
+        box-shadow: 0px 0px 5px 0px rgba(173,64,173,0.63), inset 0px 0px 5px 0px rgba(173,64,173,0.63);
+        color: rgba(173,64,173,1);
       }
     }
   }
