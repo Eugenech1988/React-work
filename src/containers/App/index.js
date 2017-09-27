@@ -5,7 +5,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Information from '../../components/Information';
-import Application from '../../components/Application';
+import Search from '../../components/Search';
 import './style.css';
 
 
@@ -23,7 +23,7 @@ const App = (props, context) => {
             <Switch  key={location.key} location={location}>
               <Route exact path='/' component={Information}/>
               <Route path='/information' component={Information}/>
-              <Route path='/application' component={Application}/>
+              <Route path='/search' component={Search}/>
             </Switch>
           </ReactCSSTransitionGroup>
         )}/>

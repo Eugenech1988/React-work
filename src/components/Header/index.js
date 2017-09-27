@@ -5,7 +5,7 @@ import './style.css';
 
 const navItems = [
   'information',
-  'application'
+  'search'
 ];
 
 const Header = (props, context) => {
