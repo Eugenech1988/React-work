@@ -1,6 +1,17 @@
-.app-wrapp {
+.app-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  .input-wrap {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    .search-input {
+      height: 60px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
 }
