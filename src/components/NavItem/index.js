@@ -17,7 +17,7 @@ class NavItem extends React.Component {
           className="nav-link"
           onClick={this.handleClick}
           >
-          {this.props.title}!
+          {this.props.title}
         </NavLink>
       </div>
     );
