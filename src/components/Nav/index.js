@@ -12,7 +12,7 @@ const Nav = (props, context) => {
 };
 
 Nav.propTypes = {
-    children: PropTypes.node
+  children: PropTypes.node
 };
 
 export default Nav;

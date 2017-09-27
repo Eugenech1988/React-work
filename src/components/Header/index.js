@@ -10,10 +10,10 @@ const navItems = [
 
 const Header = (props, context) => {
   return (
-    <header className="main-header">
-      <div className="wrapp">
-        <div className="container">
-          <Nav className="main-nav">
+    <header className='main-header'>
+      <div className='wrapp'>
+        <div className='container'>
+          <Nav className='main-nav'>
             {navItems.map((item, index) =>
               <NavItem
                 title={item}

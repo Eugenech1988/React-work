@@ -34,7 +34,7 @@ const App = (props, context) => {
 };
 
 App.propTypes = {
-    children: PropTypes.node
+  children: PropTypes.node
 };
 
 export default App;
