@@ -25,8 +25,8 @@ class Search extends Component {
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.props.inputValue);
     event.preventDefault();
+
   }
 
   handleFocus() {
