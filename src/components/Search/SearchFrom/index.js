@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import cx from 'classnames';
 import searchIcon from '../../../assets/icons/search.svg';
-import './Style.css';
+import './style.css';
 
 class Search extends Component {
   constructor(props) {
@@ -34,9 +34,9 @@ class Search extends Component {
 
   handleBlur(event) {
     let value = event.target.value;
-      if (!value) {
-        this.setState({focused: false});
-      }
+    if (!value) {
+      this.setState({focused: false});
+    }
   }
 
   render() {
@@ -44,7 +44,7 @@ class Search extends Component {
       focused: this.state.focused,
     });
     return (
-      <div className="search-form-wrap">
+      <div className='search-form-wrap'>
         <form
           action=''
           className='search-form'
@@ -68,11 +68,11 @@ class Search extends Component {
               Search
             </label>
           </div>
-          <div className="btn-wrap">
+          <div className='btn-wrap'>
             <button
-              className="submit-btn"
+              className='submit-btn'
             >
-              <img src={searchIcon} alt="" className="search-icon"/>
+              <img src={searchIcon} alt='' className='search-icon'/>
             </button>
           </div>
         </form>

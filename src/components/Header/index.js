@@ -23,7 +23,7 @@ const Header = (props, context) => {
         </Nav>
       </div>
     </header>
-  )
+  );
 };
 
 export default Header;

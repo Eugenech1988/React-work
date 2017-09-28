@@ -3,6 +3,150 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px"
 	 height="600px" viewBox="0 0 600 600" enable-background="new 0 0 600 600" xml:space="preserve">
+
+<style>
+	#Layer_2{
+	  animation: loaderRotate linear 4s;
+	  animation-iteration-count: infinite;
+	  transform-origin: 50% 50%;
+	  -webkit-animation: loaderRotate linear 4s;
+	  -webkit-animation-iteration-count: infinite;
+	  -webkit-transform-origin: 50% 50%;
+	  -moz-animation: loaderRotate linear 4s;
+	  -moz-animation-iteration-count: infinite;
+	  -moz-transform-origin: 50% 50%;
+	  -o-animation: loaderRotate linear 4s;
+	  -o-animation-iteration-count: infinite;
+	  -o-transform-origin: 50% 50%;
+	  -ms-animation: loaderRotate linear 4s;
+	  -ms-animation-iteration-count: infinite;
+	  -ms-transform-origin: 50% 50%;
+	}
+
+	@keyframes loaderRotate{
+	  0% {
+		transform:  rotate(0deg) ;
+	  }
+	  100% {
+		transform:  rotate(360deg) ;
+	  }
+	}
+
+	@-moz-keyframes loaderRotate{
+	  0% {
+		-moz-transform:  rotate(0deg) ;
+	  }
+	  100% {
+		-moz-transform:  rotate(360deg) ;
+	  }
+	}
+
+	@-webkit-keyframes loaderRotate {
+	  0% {
+		-webkit-transform:  rotate(0deg) ;
+	  }
+	  100% {
+		-webkit-transform:  rotate(360deg) ;
+	  }
+	}
+
+	@-o-keyframes loaderRotate {
+	  0% {
+		-o-transform:  rotate(0deg) ;
+	  }
+	  100% {
+		-o-transform:  rotate(360deg) ;
+	  }
+	}
+
+	@-ms-keyframes loaderRotate {
+	  0% {
+		-ms-transform:  rotate(0deg) ;
+	  }
+	  100% {
+		-ms-transform:  rotate(360deg) ;
+	  }
+	}
+
+	#Layer_3{
+	  animation: loaderFade linear 2s;
+	  animation-iteration-count: infinite;
+	  transform-origin: 50% 50%;
+	  -webkit-animation: loaderFade linear 2s;
+	  -webkit-animation-iteration-count: infinite;
+	  -webkit-transform-origin: 50% 50%;
+	  -moz-animation: loaderFade linear 2s;
+	  -moz-animation-iteration-count: infinite;
+	  -moz-transform-origin: 50% 50%;
+	  -o-animation: loaderFade linear 2s;
+	  -o-animation-iteration-count: infinite;
+	  -o-transform-origin: 50% 50%;
+	  -ms-animation: loaderFade linear 2s;
+	  -ms-animation-iteration-count: infinite;
+	  -ms-transform-origin: 50% 50%;
+	}
+
+	@keyframes loaderFade{
+	  0% {
+		opacity:1;
+	  }
+	  50% {
+		opacity:0;
+	  }
+	  100% {
+		opacity:1;
+	  }
+	}
+
+	@-moz-keyframes loaderFade{
+	  0% {
+		opacity:1;
+	  }
+	  50% {
+		opacity:0;
+	  }
+	  100% {
+		opacity:1;
+	  }
+	}
+
+	@-webkit-keyframes loaderFade {
+	  0% {
+		opacity:1;
+	  }
+	  50% {
+		opacity:0;
+	  }
+	  100% {
+		opacity:1;
+	  }
+	}
+
+	@-o-keyframes loaderFade {
+	  0% {
+		opacity:1;
+	  }
+	  50% {
+		opacity:0;
+	  }
+	  100% {
+		opacity:1;
+	  }
+	}
+
+	@-ms-keyframes loaderFade {
+	  0% {
+		opacity:1;
+	  }
+	  50% {
+		opacity:0;
+	  }
+	  100% {
+		opacity:1;
+	  }
+	}
+</style>
+
 <g id="Layer_2">
 	<path fill="none" stroke="#BFFF00" stroke-width="24" stroke-miterlimit="10" d="M371.987,227.641
 		c47.628,47.628,85.039,98.708,106.914,143.552c26.358,54.033,30.096,99.722,11.103,118.714

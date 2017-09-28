@@ -3,11 +3,11 @@ import './style.css';
 
 const Information = (props, context) => {
   return (
-    <div className="main-content-information">
-      <h1 className="heading">
+    <div className='main-content-information'>
+      <h1 className='heading'>
         React Search App
       </h1>
-      <p className="notify">
+      <p className='notify'>
         This is React Search App
       </p>
     </div>

@@ -5,6 +5,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Information from '../../components/Information';
+import Loader from '../../components/Loader';
 import Search from '../../components/Search';
 import './style.css';
 
@@ -14,6 +15,7 @@ const App = (props, context) => {
     <div className='wrapper'>
       <Header />
       <div className='content'>
+        <Loader/>
         <Route render={({location}) => (
           <ReactCSSTransitionGroup
             transitionName='fade'
