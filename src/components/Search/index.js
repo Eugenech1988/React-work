@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import SearchForm from '../SearchFrom';
+import SearchForm from './SearchFrom';
 import './Style.css';
 
 class Search extends Component {

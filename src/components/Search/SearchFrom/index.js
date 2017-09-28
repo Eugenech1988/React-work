@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import cx from 'classnames';
+import searchIcon from '../../../assets/icons/search.svg';
 import './Style.css';
 
 class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
       focused: false
     };
 
@@ -18,6 +18,8 @@ class Search extends Component {
 
   handleChange(event) {
     this.setState({value: event.target.value});
+
+
     console.log(event.target.value);
   }
 
@@ -30,8 +32,13 @@ class Search extends Component {
     this.setState({focused: true});
   }
 
-  onBlur() {
-    this.setState({focused: false});
+  onBlur(event) {
+    let value = event.target.value;
+      if (value) {
+        console.log(value);
+      } else {
+        console.log('empty');
+      }
   }
 
   render() {
@@ -40,13 +47,17 @@ class Search extends Component {
     });
     return (
       <div className="search-form-wrap">
-        <form action='' className='search-form'>
+        <form
+          action=''
+          className='search-form'
+          onSubmit={this.handleSubmit}
+        >
           <div className='input-wrap'>
             <input
               type='text'
-              value={this.state.value}
+              value={this.props.inputValue}
               onChange={this.handleChange}
-              onFocus={this.onFocus}
+              onfocus={this.onFocus}
               onBlur={this.onBlur}
               className={className}
               name='search-input'
@@ -59,10 +70,18 @@ class Search extends Component {
               Search
             </label>
           </div>
+          <div className="btn-wrap">
+            <button
+              className="submit-btn"
+            >
+              <img src={searchIcon} className="search-icon"/>
+            </button>
+          </div>
         </form>
       </div>
     );
   }
 }
+
 
 export default Search;
