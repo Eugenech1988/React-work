@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import cx from 'classnames';
+import { connect } from 'react-redux';
+import inputAction from '../../../actions/inputAction';
 import searchIcon from '../../../assets/icons/search.svg';
 import './style.css';
 
@@ -14,13 +16,12 @@ class Search extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
+
+    // this.inputAction = ;
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
-
-
-    console.log(event.target.value);
+    inputAction(event.target.value)(this.props.dispatch);
   }
 
   handleSubmit(event) {
@@ -41,7 +42,7 @@ class Search extends Component {
 
   render() {
     const className = cx('input-wrap', {
-      focused: this.state.focused,
+      focused: this.state.focused
     });
     return (
       <div className='search-form-wrap'>
@@ -82,4 +83,4 @@ class Search extends Component {
 }
 
 
-export default Search;
+export default connect(state => ({inputValue: state.inputValue}))(Search);

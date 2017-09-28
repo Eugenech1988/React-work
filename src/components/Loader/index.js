@@ -5,7 +5,9 @@ import loaderIcon from '../../assets/icons/ReactHeart.svg';
 import './style.css';
 
 const Loader = (props, context) => {
-  const className = cx('loader', props.loaderInit);
+  const className = cx('loader', {
+    init: props.loaderInit
+  });
   return (
     <div {...props} className={className}>
       <div className='wrapp'>

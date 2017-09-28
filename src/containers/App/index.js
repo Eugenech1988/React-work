@@ -16,7 +16,7 @@ const App = (props, context) => {
       <Header />
       <div className='content'>
         <Loader
-          loaderInit
+          // loaderInit
         />
         <Route render={({location}) => (
           <ReactCSSTransitionGroup

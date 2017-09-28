@@ -5,5 +5,5 @@ import inputValueReducer from './inputValueReducer';
 
 export default combineReducers({
   defaultReducer,
-  inputValueReducer
+  inputValue: inputValueReducer
 });

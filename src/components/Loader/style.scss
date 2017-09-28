@@ -1,11 +1,10 @@
 .loader {
-  z-index: -1;
   transition: all .5s ease;
-  opacity: .0;
+  display: none;
   &.init {
     .wrapp {
-      opacity: .1;
       z-index: 100;
+      opacity: 1;
     }
   }
   .wrapp {
@@ -13,7 +12,9 @@
     height: calc(100vh - 100px);
     width: 100%;
     position: absolute;
-     .loader-img {
+    z-index: -1;
+    opacity: 0;
+    .loader-img {
        height: auto;
        max-width: 120px;
        position: absolute;

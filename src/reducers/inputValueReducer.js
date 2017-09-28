@@ -1,17 +1,14 @@
 import {
-  DEFAULT_CONST
+  GET_INPUT_VALUE
 }
-  from '../constans/defaultConst';
+  from '../constans/inputConst';
 
-const initialState = {
-
-};
+const initialState = '';
 
 export default function inputValueReducer( state = initialState, action ) {
   switch ( action.type ) {
-    case DEFAULT_CONST:
-      return state;
-
+    case GET_INPUT_VALUE:
+      return action.inputValue;
     default:
       return state;
   }
