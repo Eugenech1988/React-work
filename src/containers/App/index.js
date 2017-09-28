@@ -15,7 +15,9 @@ const App = (props, context) => {
     <div className='wrapper'>
       <Header />
       <div className='content'>
-        <Loader/>
+        <Loader
+          loaderInit
+        />
         <Route render={({location}) => (
           <ReactCSSTransitionGroup
             transitionName='fade'
