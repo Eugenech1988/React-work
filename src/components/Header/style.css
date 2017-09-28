@@ -1,18 +1,5 @@
 .main-header .wrapp {
-  background: #d4e4ef;
-  background: -moz-linear-gradient(top, #d4e4ef 0%, #86aecc 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #d4e4ef), color-stop(100%, #86aecc));
-  background: -webkit-linear-gradient(top, #d4e4ef 0%, #86aecc 100%);
-  background: -o-linear-gradient(top, #d4e4ef 0%, #86aecc 100%);
-  background: -ms-linear-gradient(top, #d4e4ef 0%, #86aecc 100%);
-  background: linear-gradient(to bottom, #d4e4ef 0%, #86aecc 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=0 );
-  font-size: 0;
-  -webkit-box-shadow: inset 0px 0px 15px 2px #f3f3f3;
-  -moz-box-shadow: inset 0px 0px 15px 2px #f3f3f3;
-  box-shadow: inset 0px 0px 15px 2px #f3f3f3;
-  padding-top: 15px;
-  padding-bottom: 15px; }
+  font-size: 0; }
 
 .main-header .logo-wrapp {
   display: inline-block; }
@@ -35,29 +22,38 @@
     display: inline-block;
     width: 50%; }
   .main-header .main-nav .nav-link {
-    color: white;
-    width: 95%;
+    color: #6d95bb;
+    width: 100%;
     font-size: 18px;
     display: inline-block;
     line-height: 30px;
-    font-family: 'sfns_displaythin', sans-serif;
+    font-family: 'sfns_displayregular', sans-serif;
     text-decoration: none;
-    margin-right: 5px;
-    padding: 5px 0;
+    padding: 10px 0;
     transition: all .3s linear;
-    border-radius: 5px;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    background-color: white;
+    position: relative; }
+    .main-header .main-nav .nav-link:after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 3px;
+      display: block;
+      background-color: #87c355;
+      transition: all .5s ease; }
     .main-header .main-nav .nav-link:hover {
-      background-color: white;
-      color: #92addf;
-      -webkit-box-shadow: inset 0px 0px 5px 0 #92addf, 0px 0px 5px 0 #92addf;
-      -moz-box-shadow: inset 0px 0px 5px 0 #92addf, 0px 0px 5px 0 #92addf;
-      box-shadow: inset 0px 0px 5px 0 #92addf, 0px 0px 5px 0 #92addf; }
+      box-shadow: inset 0 0 0 50px #87c355;
+      color: white; }
     .main-header .main-nav .nav-link.active {
       transition: all .3s ease;
       background-color: rgba(255, 255, 255, 0.8);
-      -webkit-box-shadow: 0px 0px 5px 0px #92addf, inset 0px 0px 5px 0px #92addf;
-      -moz-box-shadow: 0px 0px 5px 0px #92addf, inset 0px 0px 5px 0px #92addf;
-      box-shadow: 0px 0px 5px 0px #92addf, inset 0px 0px 5px 0px #92addf;
-      color: #315aa7;
-      font-weight: 700; }
+      font-weight: 700;
+      font-family: 'sfns_displayregular', sans-serif;
+      box-shadow: none;
+      color: #87c355; }
+      .main-header .main-nav .nav-link.active:after {
+        width: 100%; }

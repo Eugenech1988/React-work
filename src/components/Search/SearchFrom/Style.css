@@ -9,7 +9,28 @@
     vertical-align: middle;
     max-width: 500px;
     width: 100%;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    transition: all .3s ease; }
+    .search-form-wrap .input-wrap:after {
+      transition: all .3s ease;
+      width: 0;
+      box-shadow: inset 0 0 0 5px #6d95bb;
+      height: 60px;
+      content: '';
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      position: absolute; }
+    .search-form-wrap .input-wrap.focused {
+      margin-right: 10px;
+      transition: all .3s ease; }
+      .search-form-wrap .input-wrap.focused .search-label {
+        top: -30px;
+        font-size: 16px;
+        transform: none; }
+      .search-form-wrap .input-wrap.focused:after {
+        transition: all .3s ease;
+        width: 100%; }
     @media (max-width: 767px) {
       .search-form-wrap .input-wrap {
         max-width: 220px; } }
@@ -22,25 +43,17 @@
       font-size: 22px;
       line-height: 22px;
       color: #222;
-      border-radius: 10px;
       border: none;
-      transition: box-shadow .3s ease; }
-      .search-form-wrap .input-wrap .search-input:focus {
-        box-shadow: 0 0 15px 3px #334443; }
-      .search-form-wrap .input-wrap .search-input.focused + label {
-        transform: none;
-        top: -15px;
-        left: 100%;
-        opacity: 0; }
+      transition: box-shadow .5s ease; }
     .search-form-wrap .input-wrap .search-label {
+      color: #2d4862;
       position: absolute;
       top: 50%;
       left: 15px;
       font-size: 22px;
       line-height: 22px;
-      color: #334443;
       transform: translateY(-50%);
-      transition: all .3s ease; }
+      transition: all .5s ease; }
   .search-form-wrap .btn-wrap {
     display: inline-block;
     vertical-align: middle; }
@@ -48,18 +61,15 @@
       display: inline-block;
       height: 60px;
       width: 60px;
-      margin-left: 10px;
-      background-color: #334443;
+      background-color: #87c355;
       border: none;
-      border-radius: 10px;
       cursor: pointer;
       transition: background-color .3s ease, box-shadow .3s ease; }
       .search-form-wrap .btn-wrap .submit-btn:hover {
-        background-color: #779997;
-        box-shadow: 0 0 15px 3px #334443; }
+        background-color: #619635; }
       .search-form-wrap .btn-wrap .submit-btn:active {
         outline: none;
-        background-color: black; }
+        background-color: #3d5e21; }
       .search-form-wrap .btn-wrap .submit-btn:focus {
         outline: none; }
     .search-form-wrap .btn-wrap .search-icon {

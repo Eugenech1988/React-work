@@ -5,24 +5,22 @@ import './style.css';
 
 const navItems = [
   'information',
-  'search'
+  'application'
 ];
 
 const Header = (props, context) => {
   return (
     <header className='main-header'>
       <div className='wrapp'>
-        <div className='container'>
-          <Nav className='main-nav'>
-            {navItems.map((item, index) =>
-              <NavItem
-                title={item}
-                activeKey={item}
-                key={index}
-              />
-            )}
-          </Nav>
-        </div>
+        <Nav className='main-nav'>
+          {navItems.map((item, index) =>
+            <NavItem
+              title={item}
+              activeKey={item}
+              key={index}
+            />
+          )}
+        </Nav>
       </div>
     </header>
   )

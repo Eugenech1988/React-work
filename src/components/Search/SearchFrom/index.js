@@ -40,7 +40,7 @@ class Search extends Component {
   }
 
   render() {
-    const className = cx('search-input', {
+    const className = cx('input-wrap', {
       focused: this.state.focused,
     });
     return (
@@ -50,14 +50,14 @@ class Search extends Component {
           className='search-form'
           onSubmit={this.handleSubmit}
         >
-          <div className='input-wrap'>
+          <div className={className}>
             <input
               type='text'
               value={this.props.inputValue}
               onChange={this.handleChange}
               onFocus={this.handleFocus}
               onBlur={this.handleBlur}
-              className={className}
+              className='search-input'
               name='search-input'
               id='search-input'
             />

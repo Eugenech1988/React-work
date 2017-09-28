@@ -23,7 +23,7 @@ const App = (props, context) => {
             <Switch  key={location.key} location={location}>
               <Route exact path='/' component={Information}/>
               <Route path='/information' component={Information}/>
-              <Route path='/search' component={Search}/>
+              <Route path='/application' component={Search}/>
             </Switch>
           </ReactCSSTransitionGroup>
         )}/>
