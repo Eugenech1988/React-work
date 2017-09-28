@@ -33,12 +33,13 @@
       font-family: 'sfns_displayregular', sans-serif;
       text-decoration: none;
       padding: 10px 0;
-      transition: all .3s linear;
+      transition: all .3s ease;
       text-transform: capitalize;
       background-color: white;
       position: relative;
       &:after {
         position: absolute;
+        background-color: darken(#a1bbd3, 15%);
         content: '';
         bottom: 0;
         left: 50%;
@@ -46,7 +47,6 @@
         width: 0;
         height: 3px;
         display: block;
-        background-color: rgba(135, 195, 85 ,1);
         transition: all .5s ease;
       }
       &:hover {
@@ -61,6 +61,7 @@
         box-shadow: none;
         color: rgba(135, 195, 85 ,1);
         &:after {
+          background-color: rgba(135, 195, 85 ,1);
           width: 100%;
         }
       }
