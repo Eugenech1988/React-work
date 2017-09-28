@@ -83,6 +83,9 @@ body {
   position: relative;
   background: #f3f3f3 url(../../assets/icons/reactBG.svg) no-repeat center center;
   background-size: 50% 50%;
+  @media (max-width: 767px) {
+    background-size: 100%;
+  }
 }
 .main-footer {
   -webkit-box-flex: 0;
@@ -156,11 +159,4 @@ input:focus:-moz-placeholder { /* Firefox 18- */
   opacity: 0;
   transition: opacity 500ms ease-in;
   top: 0;
-}
-
-.content-h {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }

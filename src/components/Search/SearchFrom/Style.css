@@ -7,9 +7,12 @@
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    max-width: 270px;
+    max-width: 500px;
     width: 100%;
     box-sizing: border-box; }
+    @media (max-width: 767px) {
+      .search-form-wrap .input-wrap {
+        max-width: 220px; } }
     .search-form-wrap .input-wrap .search-input {
       height: 60px;
       width: 100%;
@@ -24,6 +27,11 @@
       transition: box-shadow .3s ease; }
       .search-form-wrap .input-wrap .search-input:focus {
         box-shadow: 0 0 15px 3px #334443; }
+      .search-form-wrap .input-wrap .search-input.focused + label {
+        transform: none;
+        top: -15px;
+        left: 100%;
+        opacity: 0; }
     .search-form-wrap .input-wrap .search-label {
       position: absolute;
       top: 50%;

@@ -12,8 +12,8 @@ class Search extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.onFocus = this.onFocus.bind(this);
-    this.onBlur = this.onBlur.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
   }
 
   handleChange(event) {
@@ -28,16 +28,14 @@ class Search extends Component {
     event.preventDefault();
   }
 
-  onFocus() {
+  handleFocus() {
     this.setState({focused: true});
   }
 
-  onBlur(event) {
+  handleBlur(event) {
     let value = event.target.value;
-      if (value) {
-        console.log(value);
-      } else {
-        console.log('empty');
+      if (!value) {
+        this.setState({focused: false});
       }
   }
 
@@ -57,8 +55,8 @@ class Search extends Component {
               type='text'
               value={this.props.inputValue}
               onChange={this.handleChange}
-              onfocus={this.onFocus}
-              onBlur={this.onBlur}
+              onFocus={this.handleFocus}
+              onBlur={this.handleBlur}
               className={className}
               name='search-input'
               id='search-input'
@@ -74,7 +72,7 @@ class Search extends Component {
             <button
               className="submit-btn"
             >
-              <img src={searchIcon} className="search-icon"/>
+              <img src={searchIcon} alt="" className="search-icon"/>
             </button>
           </div>
         </form>
