@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import cx from 'classnames';
 import { connect } from 'react-redux';
+import axios from 'axios';
+import ResultTable from '../ResultTable';
 import inputAction from '../../../actions/inputAction';
 import searchIcon from '../../../assets/icons/search.svg';
 import './style.css';
@@ -16,8 +18,6 @@ class Search extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
-
-    // this.inputAction = ;
   }
 
   handleChange(event) {
@@ -26,7 +26,15 @@ class Search extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-
+    axios.get(`https://api.github.com/search/repositories?q=${this.props.inputValue}.json`)
+      .then(function(response) {
+        let id = response.data.items;
+        console.log(id);
+        console.log(id.id);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
   }
 
   handleFocus() {
@@ -34,7 +42,7 @@ class Search extends Component {
   }
 
   handleBlur(event) {
-    let value = event.target.value;
+    const value = event.target.value;
     if (!value) {
       this.setState({focused: false});
     }
@@ -77,6 +85,7 @@ class Search extends Component {
             </button>
           </div>
         </form>
+        <ResultTable />
       </div>
     );
   }
