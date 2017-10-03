@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ResultAction from '../../../actions/resultAction';
+import {connect} from 'react-redux';
 import './style.css';
 
 class ResultTable extends Component {
@@ -25,5 +25,4 @@ class ResultTable extends Component {
   }
 }
 
-export default ResultTable;
-
+export default connect(state => ({resultValue: state.resultValue}))(ResultTable);

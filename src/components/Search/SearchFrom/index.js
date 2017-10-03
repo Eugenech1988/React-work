@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import ResultTable from '../ResultTable';
 import inputAction from '../../../actions/inputAction';
+import resultAction from '../../../actions/resultAction';
 import searchIcon from '../../../assets/icons/search.svg';
 import './style.css';
 
@@ -28,9 +29,8 @@ class Search extends Component {
     event.preventDefault();
     axios.get(`https://api.github.com/search/repositories?q=${this.props.inputValue}.json`)
       .then(function(response) {
-        let id = response.data.items;
-        console.log(id);
-        console.log(id.id);
+        const id = response.data.items;
+        resultAction(id)(this.props.dispatch);
       })
       .catch(function(error) {
         console.log(error);
@@ -92,4 +92,4 @@ class Search extends Component {
 }
 
 
-export default connect(state => ({inputValue: state.inputValue}))(Search);
+export default connect(state => ({inputValue: state.inputValue, resultValue: state.resultValue}))(Search);
