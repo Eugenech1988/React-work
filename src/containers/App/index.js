@@ -5,7 +5,6 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Information from '../../components/Information';
-import Loader from '../../components/Loader';
 import Search from '../../components/Search';
 import './style.css';
 

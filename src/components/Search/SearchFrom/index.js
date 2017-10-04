@@ -46,6 +46,7 @@ class Search extends Component {
         console.log(id);
       })
       .catch((error) => {
+        this.setState({loader: false});
         console.log(error);
       });
   }
@@ -67,7 +68,11 @@ class Search extends Component {
     });
     return (
       <div className='search-form-wrap'>
-        {this.state.loader && <Loader />}
+        {this.state.loader &&
+
+        <Loader />
+
+        }
         <form
           action=''
           className='search-form'
