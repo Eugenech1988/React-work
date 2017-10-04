@@ -30,7 +30,10 @@ class ResultTable extends Component {
           <div className='table-content-wrap'>
             {resultValue.map((item, index) =>
               (
-                <div className='table-row' key={index}>
+                <div
+                  className='table-row'
+                  key={index}
+                >
                   <div className='table-col'>
                     <div className='table-content'>
                       {item.id}
