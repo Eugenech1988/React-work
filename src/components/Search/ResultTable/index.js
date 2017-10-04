@@ -27,22 +27,22 @@ class ResultTable extends Component {
               </div>
             </div>
           </div>
-          <div className='table-content'>
+          <div className='table-content-wrap'>
             {resultValue.map((item, index) =>
               (
-                <div className='table-row'>
+                <div className='table-row' key={index}>
                   <div className='table-col'>
-                    <div className='content'>
+                    <div className='table-content'>
                       {item.id}
                     </div>
                   </div>
                   <div className='table-col'>
-                    <div className='content'>
+                    <div className='table-content'>
                       {item.name}
                     </div>
                   </div>
-                  <div className='table-сol'>
-                    <div className='content'>
+                  <div className='table-col'>
+                    <div className='table-content'>
                       {item.full_name}
                     </div>
                   </div>
