@@ -21,6 +21,12 @@ class Search extends Component {
     this.handleBlur = this.handleBlur.bind(this);
   }
 
+  componentDidMount() {
+    if (this.searchInput.value) {
+      this.setState({focused: true});
+    }
+  }
+
   handleChange(event) {
     inputAction(event.target.value)(this.props.dispatch);
   }
@@ -28,11 +34,11 @@ class Search extends Component {
   handleSubmit(event) {
     event.preventDefault();
     axios.get(`https://api.github.com/search/repositories?q=${this.props.inputValue}.json`)
-      .then(function(response) {
+      .then((response) => {
         const id = response.data.items;
         resultAction(id)(this.props.dispatch);
       })
-      .catch(function(error) {
+      .catch((error) => {
         console.log(error);
       });
   }
@@ -63,6 +69,7 @@ class Search extends Component {
             <input
               type='text'
               value={this.props.inputValue}
+              ref={(input) => { this.searchInput = input; }}
               onChange={this.handleChange}
               onFocus={this.handleFocus}
               onBlur={this.handleBlur}

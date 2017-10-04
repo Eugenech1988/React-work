@@ -1,22 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 class NavItem extends React.Component {
-
   handleClick = () => {
-
-
-    };
+    console.log('clicked');
+  };
 
   render() {
     return (
-      <div className="nav-item">
+      <div className='nav-item'>
         <NavLink
-          to={'/'+this.props.title}
-          className="nav-link"
+          to={'/' + this.props.title}
+          className='nav-link'
           onClick={this.handleClick}
-          >
+        >
           {this.props.title}
         </NavLink>
       </div>
@@ -26,7 +24,7 @@ class NavItem extends React.Component {
 
 NavItem.propTypes = {
   activeKey: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 };
 
 export default NavItem;
