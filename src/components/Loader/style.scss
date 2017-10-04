@@ -1,5 +1,5 @@
 .loader {
-  transition: all .5s ease;
+  transition: all .2s ease;
   .wrapp {
     background-color: #f2f2f2;
     height: calc(100vh - 100px);
@@ -9,7 +9,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 100;
+    z-index: 100000;
     opacity: 1;
     .loader-img {
        height: auto;
@@ -20,4 +20,22 @@
        transform: translate(-50%, -50%);
      }
   }
+}
+
+.loaderAnimate-enter {
+  opacity: 0;
+}
+
+.loaderAnimate-enter.loaderAnimate-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
+
+.loaderAnimate-leave {
+  opacity: 1;
+}
+
+.loaderAnimate-leave.loaderAnimate-leave-active {
+  opacity: 0;
+  transition: opacity 200ms ease-in;
 }

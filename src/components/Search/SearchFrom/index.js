@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import cx from 'classnames';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import axios from 'axios';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Loader from '../../Loader';
 import ResultTable from '../ResultTable';
 import inputAction from '../../../actions/inputAction';
@@ -16,7 +17,6 @@ class Search extends Component {
       focused: false,
       loader: false
     };
-
 
 
     this.handleChange = this.handleChange.bind(this);
@@ -68,11 +68,13 @@ class Search extends Component {
     });
     return (
       <div className='search-form-wrap'>
-        {this.state.loader &&
-
-        <Loader />
-
-        }
+        <ReactCSSTransitionGroup
+          transitionName='loaderAnimate'
+          transitionEnterTimeout={0}
+          transitionLeaveTimeout={0}
+        >
+          {this.state.loader && ( <Loader />)}
+        </ReactCSSTransitionGroup>
         <form
           action=''
           className='search-form'
@@ -82,7 +84,9 @@ class Search extends Component {
             <input
               type='text'
               value={this.props.inputValue}
-              ref={(input) => { this.searchInput = input; }}
+              ref={(input) => {
+                this.searchInput = input;
+              }}
               onChange={this.handleChange}
               onFocus={this.handleFocus}
               onBlur={this.handleBlur}
