@@ -1,24 +1,20 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 import './style.css';
 
 class ResultTable extends Component {
-  constructor(props) {
-    super(props);
-    console.log(this.props.resultValue);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   render() {
-    console.log(this.props.resultValue);
     return (
       <div className='result-table'>
         <div className='wrap'>
           <div className='table-header'>
-            <div className='row'>
-              <div className='col-lg-3'></div>
-              <div className='col-lg-3'></div>
-              <div className='col-lg-3'></div>
-              <div className='col-lg-3'></div>
+            <div className='table-row'>
+
             </div>
           </div>
         </div>
@@ -26,5 +22,9 @@ class ResultTable extends Component {
     );
   }
 }
+
+ResultTable.propTypes = {
+  resultvalue: PropTypes.array
+};
 
 export default connect(state => ({resultValue: state.resultValue}))(ResultTable);

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import cx from 'classnames';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import Loader from '../../Loader';
 import ResultTable from '../ResultTable';
 import inputAction from '../../../actions/inputAction';
 import resultAction from '../../../actions/resultAction';
@@ -12,8 +13,11 @@ class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      focused: false
+      focused: false,
+      loader: false
     };
+
+
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -33,10 +37,13 @@ class Search extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    this.setState({loader: true});
     axios.get(`https://api.github.com/search/repositories?q=${this.props.inputValue}.json`)
       .then((response) => {
+        this.setState({loader: false});
         const id = response.data.items;
         resultAction(id)(this.props.dispatch);
+        console.log(id);
       })
       .catch((error) => {
         console.log(error);
@@ -60,6 +67,7 @@ class Search extends Component {
     });
     return (
       <div className='search-form-wrap'>
+        {this.state.loader && <Loader />}
         <form
           action=''
           className='search-form'
