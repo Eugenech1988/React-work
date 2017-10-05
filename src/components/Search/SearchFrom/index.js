@@ -3,10 +3,12 @@ import cx from 'classnames';
 import {connect} from 'react-redux';
 import axios from 'axios';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import PropTypes from 'prop-types';
 import Loader from '../../Loader';
 import ResultTable from '../ResultTable';
 import inputAction from '../../../actions/inputAction';
 import resultAction from '../../../actions/resultAction';
+import loaderToggle from '../../../actions/loaderAction';
 import searchIcon from '../../../assets/icons/search.svg';
 import './style.css';
 
@@ -15,7 +17,6 @@ class Search extends Component {
     super(props);
     this.state = {
       focused: false,
-      loader: false
     };
 
 
@@ -37,16 +38,15 @@ class Search extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.setState({loader: true});
+    loaderToggle(true)(this.props.dispatch);
     axios.get(`https://api.github.com/search/repositories?q=${this.props.inputValue}.json`)
       .then((response) => {
-        this.setState({loader: false});
+        loaderToggle(false)(this.props.dispatch);
         const id = response.data.items;
         resultAction(id)(this.props.dispatch);
-        console.log(id);
       })
       .catch((error) => {
-        this.setState({loader: false});
+        loaderToggle(false)(this.props.dispatch);
         console.log(error);
       });
   }
@@ -70,10 +70,10 @@ class Search extends Component {
       <div className='search-form-wrap'>
         <ReactCSSTransitionGroup
           transitionName='loaderAnimate'
-          transitionEnterTimeout={0}
-          transitionLeaveTimeout={0}
+          transitionEnterTimeout={200}
+          transitionLeaveTimeout={200}
         >
-          {this.state.loader && ( <Loader />)}
+          {this.props.loaderInit && ( <Loader />)}
         </ReactCSSTransitionGroup>
         <form
           action=''
@@ -115,5 +115,11 @@ class Search extends Component {
   }
 }
 
+Search.propTypes = {
+  loaderInit: PropTypes.bool,
+  inputValue: PropTypes.string,
+  dispatch: PropTypes.func
+};
 
-export default connect(state => ({inputValue: state.inputValue, resultValue: state.resultValue}))(Search);
+
+export default connect(state => ({inputValue: state.inputValue, resultValue: state.resultValue, loaderInit: state.loaderInit}))(Search);

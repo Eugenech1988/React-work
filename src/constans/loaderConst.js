@@ -1,0 +1,1 @@
+export const LOADER_TOGGLE = 'LOADER_TOGGLE';
